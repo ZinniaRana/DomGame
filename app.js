@@ -13,6 +13,7 @@ var scores, roundScore, activePlayer, gamePlaying;
 
 init();    //initialize vars
 
+var lastDice;
 
 document.querySelector('.btn-roll').addEventListener('click',function(){
     if(gamePlaying){
@@ -26,13 +27,20 @@ document.querySelector('.btn-roll').addEventListener('click',function(){
         console.log(diceNumber);
         diceDom.src = 'dice-'+ diceNumber+ '.png';
         
-        if(diceNumber !== 1){
+        if(diceNumber ===6 && lastDice === 6){
+            //Player looses score when consecutive 6's
+            scores[activePlayer] =0;
+            document.querySelector('#score-' + activePlayer).textContent = '0';
+            nextPlayer();
+        }
+        else if(diceNumber !== 1){
             roundScore += diceNumber;
             document.getElementById('current-'+activePlayer).textContent = roundScore;
         }
         else{
             nextPlayer();
         }
+        lastDice = diceNumber; 
     }
 });
 
