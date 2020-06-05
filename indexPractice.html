@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="stylePractice.css">
+        <title>Dice Js Game</title>
+    </head>
+    <body>
+        <div class="wrapper main-div">
+            <div class="player1-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">0</div>
+                <div class="player-currentbox">
+                    <div class="current-label">Current</div>
+                    <div class="current-score" id="currscore-0">0</div>
+                </div>
+            </div>
+
+            <div class="player2-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">0</div>
+                <div class="player-currentbox">
+                    <div class="current-label">Current</div>
+                    <div class="current-score" id="currscore-1">0</div>
+                </div>
+            </div>
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i> NEW GAME</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>ROLL DICE</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>HOLD</button>
+            <img src="dice-5.png" alt="Dice" class="centered dice">
+            <label class="centered limit-label">Winner Score Limit</label>
+            <input type="text" class="centered limit">
+        </div>
+        <script src="app.js"></script>
+    </body>
+    
+</html>
